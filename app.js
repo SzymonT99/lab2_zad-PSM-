@@ -67,3 +67,52 @@ function  checkUser(user){
 }
 
 checkUser(user);
+
+// zad 4
+function findSubjectWithWeight(user, weight){
+	let subject = _.find(user.allGrades, function(o){
+		return o.weight == weight;
+	});
+	console.log("Przedmiot o wadze ocen równej " + weight+ ": " + subject.subjectName);
+}
+
+findSubjectWithWeight(user, 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
