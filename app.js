@@ -78,8 +78,31 @@ function findSubjectWithWeight(user, weight){
 
 findSubjectWithWeight(user, 1);
 
+// zad 5
+const collections = [ 
+	{},
+	15,
+	"hello@test.pl",
+	null,
+	['aaa', 'bbb', 5],
+	'admin@gmail.com',
+	undefined,
+	'a34@yahoo.com',
+	'321@a',
+	'321.pl'
+];
 
+function getMails(collections){
+	const reg = /^[a-z\d]+[\w\d.-]*@(?:[a-z\d]+[a-z\d-]+\.){1,5}[a-z]{2,6}$/i;	// universal email validation
+	let array = _.filter(collections, function(o){
+		return typeof o == 'string' && reg.test(o)
+	})
+	array = array.sort();
+	
+	console.log(array);
+}
 
+getMails(collections);
 
 
 
